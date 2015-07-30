@@ -379,7 +379,7 @@ static void sig_server_event(IRC_SERVER_REC *server, const char *line,
         GSList *tmp;
         void *client;
         const char *signal;
-        char *event, *args, **splitmsg, **channels, **splitargs;
+        char *event, *args, **splitmsg, **channels = { NULL }, **splitargs;
         int redirected;
 
         g_return_if_fail(line != NULL);
